@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Jose Manriquez Ulloa, Ingeniero Civil en Informatica." />
+  <title>Jose Manriquez Ulloa | Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <header class="hero" id="top">
+    <nav class="nav container">
+      <a class="logo" href="#top">Jose Manriquez Ulloa</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">Menu</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="nav.about">Perfil</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <button class="lang-btn" id="langBtn" aria-label="Cambiar idioma">EN</button>
+    </nav>
+
+    <div class="hero-content container reveal">
+      <p class="kicker" data-i18n="hero.kicker">Ingeniero Civil en Informatica</p>
+      <h1 data-i18n="hero.title">Desarrollo soluciones tecnologicas con foco en impacto real y calidad tecnica.</h1>
+      <p class="hero-description" data-i18n="hero.description">
+        Profesional con experiencia practica en programacion, evaluacion y diseno de sistemas.
+        Interesado en inteligencia artificial, desarrollo de software y tecnologias emergentes.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects" data-i18n="hero.ctaProjects">Ver proyectos</a>
+        <a class="btn btn-ghost" id="githubLink" href="https://github.com/JoMULLOA" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/jomulloa/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="metrics container reveal" id="metrics">
+      <article>
+        <h3 id="repoCount">-</h3>
+        <p data-i18n="metrics.repos">Repositorios publicos</p>
+      </article>
+      <article>
+        <h3 id="totalStars">-</h3>
+        <p data-i18n="metrics.stars">Stars acumuladas</p>
+      </article>
+      <article>
+        <h3 id="topLanguage">-</h3>
+        <p data-i18n="metrics.language">Lenguaje principal</p>
+      </article>
+      <article>
+        <h3 id="activeYear">-</h3>
+        <p data-i18n="metrics.updated">Ultima actualizacion</p>
+      </article>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" id="about">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="about.eyebrow">Perfil Profesional</p>
+        <h2 data-i18n="about.title">Jose Manriquez Ulloa | Ingeniero Civil en Informatica</h2>
+        <p data-i18n="about.description">
+          Apasionado por el desarrollo de soluciones tecnologicas, con experiencia en evaluacion y diseno de sistemas.
+          Destaco por resolucion de problemas, trabajo en equipo, compromiso y aprendizaje continuo.
+        </p>
+      </div>
+      <div class="quick-info reveal">
+        <article>
+          <h3 data-i18n="about.educationTitle">Educacion</h3>
+          <p data-i18n="about.educationBody">Ingenieria Civil en Informatica - Universidad del Bio-Bio (2021-2025)</p>
+          <p data-i18n="about.educationExtra">Talentos UdeC - Universidad de Concepcion (2017-2019)</p>
+        </article>
+        <article>
+          <h3 data-i18n="about.focusTitle">Enfoque</h3>
+          <p data-i18n="about.focusBody">Inteligencia artificial, desarrollo de software, automatizacion y tecnologias emergentes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="projects.eyebrow">Portafolio en vivo</p>
+        <h2 data-i18n="projects.title">Proyectos destacados</h2>
+        <p data-i18n="projects.description">Seleccion automatica de repositorios con mayor senal tecnica y actividad reciente.</p>
+      </div>
+      <div class="project-controls reveal">
+        <input type="search" id="searchInput" placeholder="Buscar por nombre o descripcion..." aria-label="Buscar proyecto" data-i18n-placeholder="projects.searchPlaceholder" />
+        <select id="languageFilter" aria-label="Filtrar por lenguaje">
+          <option value="all" data-i18n="projects.allLanguages">Todos los lenguajes</option>
+        </select>
+      </div>
+      <div class="project-grid" id="projectGrid"></div>
+      <p class="empty-state" id="emptyState" hidden data-i18n="projects.empty">No hay resultados para ese filtro.</p>
+    </section>
+
+    <section class="section alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="experience.eyebrow">Experiencia</p>
+          <h2 data-i18n="experience.title">Experiencia destacada</h2>
+        </div>
+        <div class="experience-grid reveal">
+          <article class="experience-card">
+            <h3 data-i18n="experience.wessex.title">The Wessex School - Rama de Rugby</h3>
+            <p class="job-period" data-i18n="experience.wessex.period">Proyecto de titulo | abr. 2025 - dic. 2025</p>
+            <p data-i18n="experience.wessex.body">Evaluacion y desarrollo de software para automatizar inscripciones, asistencia, pagos y ventas usando Flutter multiplataforma.</p>
+          </article>
+          <article class="experience-card">
+            <h3 data-i18n="experience.afp.title">AFP Capital - VP Finanzas y Riesgo</h3>
+            <p class="job-period" data-i18n="experience.afp.period">Practicante | feb. 2025 - mar. 2025</p>
+            <p data-i18n="experience.afp.body">Automatizacion de encuestas HTML con Apps Script, flujos de datos en Python y reportes dinamicos en Power BI para analisis de riesgo.</p>
+          </article>
+          <article class="experience-card">
+            <h3 data-i18n="experience.ubb.title">Universidad del Bio-Bio - CIM</h3>
+            <p class="job-period" data-i18n="experience.ubb.period">Practicante | ago. 2023 - ene. 2024 y oct. 2024 - dic. 2024</p>
+            <p data-i18n="experience.ubb.body">Proyectos de robotica y vision computacional con Python: sockets, deteccion ArUco y sistema de reconocimiento facial para acceso automatizado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="skills.eyebrow">Stack tecnico</p>
+          <h2 data-i18n="skills.title">Radar de habilidades</h2>
+          <p data-i18n="skills.description">Distribucion de lenguajes basada en repositorios publicos y herramientas de trabajo.</p>
+        </div>
+        <div class="tool-list reveal">
+          <span>Git/GitHub</span><span>Flutter</span><span>PostgreSQL</span><span>MongoDB</span><span>Power BI</span><span>Figma</span><span>Postman</span><span>Lucidchart</span>
+        </div>
+        <div class="skill-cloud reveal" id="skillCloud"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="timeline">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="timeline.eyebrow">Actividad reciente</p>
+        <h2 data-i18n="timeline.title">Timeline de repositorios</h2>
+      </div>
+      <ol class="timeline" id="timelineList"></ol>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="contact-card reveal">
+        <h2 data-i18n="contact.title">Contacto profesional</h2>
+        <p data-i18n="contact.description">Disponible para colaborar en proyectos de desarrollo de software, automatizacion e iniciativas de innovacion tecnologica.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" id="emailLink" href="mailto:manriquezjose100@gmail.com">manriquezjose100@gmail.com</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/jomulloa/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/JoMULLOA" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p id="footerText">Cargando datos de GitHub...</p>
+      <a href="#top" data-i18n="footer.backToTop">Volver arriba</a>
+    </div>
+  </footer>
+
+  <template id="projectTemplate">
+    <article class="project-card reveal">
+      <div class="project-header">
+        <h3 class="project-title"></h3>
+        <span class="project-language"></span>
+      </div>
+      <p class="project-description"></p>
+      <div class="project-meta">
+        <span class="meta-stars"></span>
+        <span class="meta-updated"></span>
+      </div>
+      <div class="project-links">
+        <a class="btn-inline repo-link" target="_blank" rel="noreferrer">Repositorio</a>
+        <a class="btn-inline live-link" target="_blank" rel="noreferrer" hidden>Demo</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
