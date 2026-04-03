@@ -1,14 +1,14 @@
 :root {
-  --bg: #ffffff;
-  --bg-alt: #f7f7f7;
-  --surface: #ffffff;
-  --text: #101010;
-  --muted: #424242;
+  --bg: #050505;
+  --bg-alt: #111111;
+  --surface: #121212;
+  --text: #f5f5f5;
+  --muted: #c3c3c3;
   --primary: #ef6c00;
   --primary-strong: #c55400;
-  --accent: #111111;
-  --border: #dfdfdf;
-  --shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  --accent: #f5f5f5;
+  --border: #2b2b2b;
+  --shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -24,8 +24,9 @@ body {
   font-family: "Outfit", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 90% -10%, rgba(239, 108, 0, 0.16), transparent 36%),
-    linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+    radial-gradient(circle at 90% -10%, rgba(239, 108, 0, 0.2), transparent 36%),
+    radial-gradient(circle at 10% 25%, rgba(239, 108, 0, 0.08), transparent 38%),
+    linear-gradient(180deg, #030303 0%, #0b0b0b 100%);
   min-height: 100vh;
   line-height: 1.45;
 }
@@ -33,7 +34,7 @@ body {
 .bg-noise {
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.03) 0.7px, transparent 0.7px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 0.7px, transparent 0.7px);
   background-size: 3px 3px;
   pointer-events: none;
   z-index: -1;
@@ -51,8 +52,8 @@ body {
   padding: 1.1rem 0;
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.82);
-  border-bottom: 1px solid rgba(223, 223, 223, 0.9);
+  background: rgba(0, 0, 0, 0.82);
+  border-bottom: 1px solid rgba(43, 43, 43, 0.9);
   backdrop-filter: blur(8px);
   z-index: 10;
 }
@@ -70,7 +71,7 @@ body {
   display: none;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: var(--surface);
+  background: #181818;
   color: var(--text);
   padding: 0.45rem 0.9rem;
   font-weight: 600;
@@ -79,14 +80,14 @@ body {
 .lang-btn {
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: #111;
+  background: #1a1a1a;
   color: #fff;
   padding: 0.42rem 0.72rem;
   font-weight: 700;
 }
 
 .lang-btn:hover {
-  background: #000;
+  background: #232323;
 }
 
 .nav-links {
@@ -106,7 +107,7 @@ body {
 }
 
 .nav-links a:hover {
-  background: rgba(239, 108, 0, 0.12);
+  background: rgba(239, 108, 0, 0.2);
 }
 
 .hero {
@@ -177,7 +178,7 @@ h1 {
 .btn-ghost {
   border-color: var(--border);
   color: var(--text);
-  background: #fff;
+  background: #1a1a1a;
 }
 
 .btn-ghost:hover {
@@ -192,7 +193,7 @@ h1 {
 }
 
 .metrics article {
-  background: #fff;
+  background: #121212;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1rem;
@@ -215,7 +216,7 @@ h1 {
 }
 
 .section.alt {
-  background: linear-gradient(180deg, rgba(247, 247, 247, 0.75), rgba(247, 247, 247, 0.9));
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.94));
   border-block: 1px solid var(--border);
 }
 
@@ -227,7 +228,7 @@ h1 {
 }
 
 .quick-info article {
-  background: #fff;
+  background: #121212;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1rem;
@@ -265,7 +266,8 @@ h1 {
 .project-controls select {
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: var(--surface);
+  background: #151515;
+  color: var(--text);
   padding: 0.7rem 0.8rem;
   min-width: 230px;
   font: inherit;
@@ -279,7 +281,7 @@ h1 {
 }
 
 .project-card {
-  background: #fff;
+  background: #121212;
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 1rem;
@@ -303,7 +305,7 @@ h1 {
 
 .project-language {
   background: rgba(239, 108, 0, 0.12);
-  color: #9a4300;
+  color: #ffb273;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
@@ -318,7 +320,7 @@ h1 {
 .project-meta {
   display: flex;
   gap: 0.8rem;
-  color: #444;
+  color: #d0d0d0;
   font-size: 0.86rem;
 }
 
@@ -341,7 +343,7 @@ h1 {
 
 .skill-pill {
   border: 1px solid var(--border);
-  background: #fff;
+  background: #121212;
   border-radius: 999px;
   padding: 0.44rem 0.8rem;
   box-shadow: var(--shadow);
@@ -355,8 +357,9 @@ h1 {
 }
 
 .tool-list span {
-  background: #111;
-  color: #fff;
+  background: #1a1a1a;
+  color: #f1f1f1;
+  border: 1px solid #303030;
   border-radius: 999px;
   padding: 0.36rem 0.68rem;
   font-size: 0.82rem;
@@ -370,7 +373,7 @@ h1 {
 }
 
 .experience-card {
-  background: #fff;
+  background: #121212;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1rem;
@@ -399,7 +402,7 @@ h1 {
 .timeline li {
   border-left: 3px solid rgba(239, 108, 0, 0.42);
   padding: 0.7rem 0 0.7rem 1rem;
-  background: #fff;
+  background: #121212;
   border-radius: 0 14px 14px 0;
 }
 
@@ -412,7 +415,7 @@ h1 {
   border-radius: 20px;
   padding: 2rem;
   background:
-    linear-gradient(120deg, rgba(239, 108, 0, 0.12), rgba(16, 16, 16, 0.04)),
+    linear-gradient(120deg, rgba(239, 108, 0, 0.14), rgba(16, 16, 16, 0.45)),
     var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -432,7 +435,7 @@ h1 {
 }
 
 .footer a {
-  color: var(--primary-strong);
+  color: #ff9c4f;
   text-decoration: none;
 }
 
